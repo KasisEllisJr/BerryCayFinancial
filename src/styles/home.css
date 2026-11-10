@@ -101,6 +101,7 @@
   display: grid;
   place-items: center;
   color: var(--burgundy);
+  height: 300px;
 }
 
 /* Buttons */
@@ -241,6 +242,21 @@
 }
 
 /* Basic responsive structure */
+
+.hero a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-actions .btn {
+    transition: none;
+  }
+
+  .hero-actions .btn:hover {
+    transform: none;
+  }
+}
 
 @media (max-width: 768px) {
   .hero-layout,

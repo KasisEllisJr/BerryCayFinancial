@@ -1,0 +1,227 @@
+
+/* ==========================================
+   BERRY CAY FINANCIAL — HEADER
+   Commit 2: Header & Navigation
+========================================== */
+
+.site-header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 3px solid var(--gold);
+  position: relative;
+  z-index: 100;
+}
+
+.header-container {
+  width: min(95%, 1320px);
+  margin: 0 auto;
+  min-height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* COMPANY BRANDING */
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--burgundy);
+}
+
+.brand-tagline {
+  font-size: 0.63rem;
+  letter-spacing: 0.4px;
+  color: #965967;
+  margin-top: 4px;
+}
+
+/* NAVIGATION */
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  padding: 10px 12px;
+  border-radius: 6px;
+
+  transition: background-color 0.2s ease,
+              color 0.2s ease;
+}
+
+.nav-link:hover {
+  background: #f7ecef;
+  color: var(--burgundy);
+}
+
+.nav-link-active {
+  background: #f7ecef;
+  color: var(--burgundy);
+}
+
+/* CONSULTATION BUTTON */
+
+.header-cta {
+  background: var(--gold);
+  color: #29220f;
+  text-decoration: none;
+
+  padding: 11px 16px;
+  border-radius: 6px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+
+  transition: background-color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.header-cta:hover {
+  background: #b99637;
+  transform: translateY(-1px);
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+.site-header a:focus-visible,
+.menu-toggle:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* MOBILE MENU TOGGLE */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  background: transparent;
+  border: 0;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--burgundy);
+  border-radius: 2px;
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 900px) {
+
+  .header-container {
+    min-height: 72px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    background: #ffffff;
+    padding: 20px;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+
+    border-bottom: 3px solid var(--gold);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .site-nav.nav-open {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 12px;
+    text-align: left;
+  }
+
+  .header-cta {
+    text-align: center;
+    margin-top: 8px;
+    padding: 14px;
+  }
+}
+
+/* SMALL MOBILE DEVICES */
+
+@media (max-width: 480px) {
+
+  .header-container {
+    width: 94%;
+  }
+
+    .brand-logo {
+        width: 45px;
+        height: auto;
+        object-fit: contain;
+    }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.46rem;
+    letter-spacing: 0;
+  }
+
+  .site-brand {
+    gap: 7px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link,
+  .header-cta {
+    transition: none;
+  }
+}

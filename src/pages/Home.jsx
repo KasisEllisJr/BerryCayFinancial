@@ -1,4 +1,4 @@
-
+import Hero from "../components/home/Hero";
 import HomeSection from "../components/home/HomeSection";
 import "../styles/home.css";
 
@@ -6,47 +6,7 @@ export default function Home() {
   return (
     <main className="home-page">
 
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="container hero-layout">
-
-          <div className="hero-content">
-            <span className="hero-eyebrow">
-              Lorem ipsum dolor sit amet
-            </span>
-
-            <h1>
-              Lorem ipsum dolor.
-              <br />
-              Consectetur adipiscing.
-              <br />
-              <span>Tempor incididunt.</span>
-            </h1>
-
-            <p>
-              Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit.
-              Sed do eiusmod tempor incididunt
-              ut labore et dolore magna aliqua.
-            </p>
-
-            <div className="hero-actions">
-              <a href="#contact" className="btn btn-gold">
-                Lorem Ipsum
-              </a>
-
-              <a href="#services" className="btn btn-outline">
-                Dolor Sit
-              </a>
-            </div>
-          </div>
-
-          <div className="hero-image-placeholder">
-            <span>Image Placeholder</span>
-          </div>
-
-        </div>
-      </section>
+      <Hero />
 
       {/* Statistics Strip */}
       <section className="stats">

@@ -1,3 +1,6 @@
+import AboutSection from "../components/home/AboutSection";
+import StatsStrip from "../components/home/StatsStrip";
+import Services from "../components/home/Services";
 import Hero from "../components/home/Hero";
 import HomeSection from "../components/home/HomeSection";
 import "../styles/home.css";
@@ -8,75 +11,11 @@ export default function Home() {
 
       <Hero />
 
-      {/* Statistics Strip */}
-      <section className="stats">
-        <div className="container stats-layout">
-          {[
-            "Lorem ipsum",
-            "Dolor sit amet",
-            "Consectetur",
-            "Adipiscing elit",
-          ].map((item, index) => (
-            <div className="stat-item" key={index}>
-              <strong>{item}</strong>
-              <p>Lorem ipsum dolor sit.</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <StatsStrip />
 
-      {/* Services */}
-      <HomeSection
-        id="services"
-        title="Lorem Ipsum"
-        alternate
-      >
-        <p className="section-intro">
-          Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
-        </p>
+      <Services />
 
-        <div className="services-grid">
-          {[1, 2, 3, 4].map((item) => (
-            <article className="service-card" key={item}>
-              <div className="service-icon-placeholder" />
-              <h3>Lorem Ipsum</h3>
-              <p>
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-              </p>
-              <a href="#contact">Lorem ipsum →</a>
-            </article>
-          ))}
-        </div>
-      </HomeSection>
-
-      {/* About */}
-      <HomeSection id="about" title="Lorem Ipsum">
-        <div className="about-layout">
-          <div className="about-image-placeholder">
-            Image Placeholder
-          </div>
-
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit.
-              Integer vitae justo eget magna
-              fermentum iaculis eu non diam.
-            </p>
-
-            <p>
-              Sed do eiusmod tempor incididunt
-              ut labore et dolore magna aliqua.
-            </p>
-
-            <a href="#contact" className="btn btn-burgundy">
-              Lorem Ipsum
-            </a>
-          </div>
-        </div>
-      </HomeSection>
+      <AboutSection />
 
       {/* Process */}
       <HomeSection

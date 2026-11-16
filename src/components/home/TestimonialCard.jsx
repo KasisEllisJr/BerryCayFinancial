@@ -1,4 +1,3 @@
-import { Star } from "lucide-react";
 
 export default function TestimonialCard({
   quote,
@@ -7,19 +6,13 @@ export default function TestimonialCard({
 }) {
   return (
     <figure className="testimonial-card">
-      <div
-        className="testimonial-stars"
+
+      <span
+        className="testimonial-quotation-mark"
         aria-hidden="true"
       >
-        {Array.from({ length: 5 }).map((_, index) => (
-          <Star
-            key={index}
-            size={17}
-            fill="currentColor"
-            strokeWidth={1}
-          />
-        ))}
-      </div>
+        “
+      </span>
 
       <blockquote className="testimonial-quote">
         <p>{quote}</p>
@@ -34,6 +27,7 @@ export default function TestimonialCard({
           {subtitle}
         </span>
       </figcaption>
+
     </figure>
   );
 }

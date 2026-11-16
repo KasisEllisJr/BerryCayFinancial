@@ -1,5 +1,5 @@
-
-import { useState } from "react";
+import logo from "../assets/logo.png";
+import { useEffect, useState } from "react";
 import "../styles/header.css";
 
 const navigationLinks = [
@@ -11,6 +11,36 @@ const navigationLinks = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+useEffect(() => {
+  if (!menuOpen) return;
+
+  function handleEscape(event) {
+    if (event.key === "Escape") {
+      setMenuOpen(false);
+
+      const menuButton =
+        document.querySelector(".menu-toggle");
+
+      menuButton?.focus();
+    }
+  }
+
+  function handleResize() {
+    if (window.innerWidth > 900) {
+      setMenuOpen(false);
+    }
+  }
+
+  window.addEventListener("keydown", handleEscape);
+  window.addEventListener("resize", handleResize);
+
+  return () => {
+    window.removeEventListener("keydown", handleEscape);
+    window.removeEventListener("resize", handleResize);
+  };
+}, [menuOpen]);
+
 
   function closeMenu() {
     setMenuOpen(false);
@@ -28,9 +58,9 @@ export default function Header() {
           aria-label="Berry Cay Financial home"
         >
         <img
-            src="/images/logo.png"
-            alt="Berry Cay Financial Logo"
-            className="brand-logo"
+          src={logo}
+          alt="Berry Cay Financial Logo"
+          className="brand-logo"
         />
           <div className="brand-text">
             <span className="brand-name">

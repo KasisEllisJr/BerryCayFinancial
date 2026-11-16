@@ -1,4 +1,4 @@
-
+import heroPortrait from "../../assets/hero-portrait.jpg";
 import { useState } from "react";
 
 export default function Hero() {
@@ -13,40 +13,36 @@ export default function Hero() {
       <div className="container hero-layout">
 
         {/* Left Column — Hero Content */}
+        
         <div className="hero-content">
 
           <p className="hero-eyebrow">
-            Lorem ipsum dolor sit amet
+            EXPERIENCE YOUR BUSINESS CAN COUNT ON
           </p>
 
           <h1 id="hero-heading">
-            Lorem ipsum dolor.
+            Big-firm experience.
             <br />
-            Consectetur adipiscing.
+            Small-business focus.
             <br />
-            <span>Tempor incididunt.</span>
+            <span>Trusted Service.</span>
           </h1>
 
           <p className="hero-description">
-            Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam.
+            Berry Cay Financial helps Bahamian small businesses
+            and individuals stay organised, on time, and
+            confident — with bookkeeping, tax reporting, and
+            advisory services led by Managing Director
+            Samantha Watson-Crooks.
           </p>
 
           <div className="hero-actions">
-            <a
-              href="#contact"
-              className="btn btn-gold"
-            >
-              Lorem Ipsum
+            <a href="#contact" className="btn btn-gold">
+              Book a Consultation
             </a>
 
-            <a
-              href="#services"
-              className="btn btn-outline"
-            >
-              Dolor Sit
+            <a href="#services" className="btn btn-outline">
+              Explore Services
             </a>
           </div>
 
@@ -54,28 +50,15 @@ export default function Hero() {
 
         {/* Right Column — Portrait */}
         <figure className="hero-portrait">
-
-          {!imageError ? (
-            <img
-              src="/images/hero-portrait.jpg"
-              alt="Berry Cay Financial founder portrait"
-              className="hero-portrait-image"
-              onError={() => setImageError(true)}
-            />
-          ) : (
-            <div
-              className="hero-portrait-placeholder"
-              role="img"
-              aria-label="Portrait image placeholder"
-            >
-              <span>Portrait Image</span>
-            </div>
-          )}
+          <img
+            src={heroPortrait}
+            alt="Berry Cay Financial founder"
+            className="hero-portrait-image"
+          />
 
           <figcaption className="hero-portrait-caption">
             Lorem ipsum dolor sit amet
           </figcaption>
-
         </figure>
 
       </div>

@@ -1,0 +1,441 @@
+
+/* ==========================================
+   BERRY CAY FINANCIAL
+   STAGE 8 — RESPONSIVE REFINEMENTS
+========================================== */
+
+/* GLOBAL LAYOUT SAFETY */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: clip;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* CONSISTENT CONTAINER */
+
+.container {
+  width: min(100% - 40px, 1200px);
+  margin-inline: auto;
+}
+
+/* SECTION SPACING */
+
+.home-section {
+  padding-block: clamp(48px, 6vw, 88px);
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.section-accent {
+  margin-bottom: 22px;
+}
+
+/* TYPOGRAPHY */
+
+.home-page p {
+  overflow-wrap: break-word;
+}
+
+.home-page h1,
+.home-page h2,
+.home-page h3 {
+  text-wrap: balance;
+}
+
+.hero-description,
+.services-intro,
+.about-description,
+.process-intro,
+.testimonials-intro {
+  line-height: 1.75;
+}
+
+/* INTERACTIVE ELEMENTS */
+
+a,
+button {
+  touch-action: manipulation;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #cba746;
+  outline-offset: 4px;
+}
+
+/* SKIP NAVIGATION */
+
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+
+  padding: 12px 18px;
+  background: #ffffff;
+  color: #581e2c;
+
+  font-weight: 700;
+  border: 2px solid #cba746;
+  border-radius: 6px;
+
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* HEADER REFINEMENTS */
+
+.site-brand {
+  min-width: 0;
+}
+
+.brand-logo {
+  display: block;
+  width: 45px;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-text {
+  min-width: 0;
+}
+
+/* HERO */
+
+.hero-layout {
+  min-width: 0;
+}
+
+.hero-content,
+.hero-portrait {
+  min-width: 0;
+}
+
+.hero-content h1 {
+  max-width: 740px;
+}
+
+.hero-portrait-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* CARDS */
+
+.service-card,
+.process-card,
+.testimonial-card {
+  min-width: 0;
+}
+
+.service-card-description,
+.process-card-description,
+.testimonial-quote {
+  overflow-wrap: break-word;
+}
+
+/* LARGE DESKTOP */
+
+@media (min-width: 1440px) {
+  .hero {
+    padding-block: 90px;
+  }
+
+  .hero-layout {
+    gap: 90px;
+  }
+
+  .hero-portrait {
+    max-width: 270px;
+  }
+}
+
+/* LAPTOP / TABLET */
+
+@media (max-width: 1024px) {
+  .container {
+    width: min(100% - 48px, 1100px);
+  }
+
+  .hero-layout {
+    gap: 36px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-section-layout {
+    gap: 34px;
+  }
+
+  .footer-grid {
+    gap: 30px;
+  }
+}
+
+/* SMALL TABLET */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding-block: 58px;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.1rem, 6vw, 3rem);
+  }
+
+  .hero-portrait {
+    max-width: 250px;
+  }
+
+  .about-section-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-portrait {
+    max-width: 300px;
+    margin-inline: auto;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .process-steps,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 32px, 540px);
+  }
+
+  .home-section {
+    padding-block: 48px;
+  }
+
+  .hero {
+    padding-block: 48px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+    line-height: 1.15;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 1.4px;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-portrait {
+    max-width: 235px;
+  }
+
+  .stats-grid {
+    gap: 0;
+  }
+
+  .stat-card {
+    padding: 20px 10px;
+  }
+
+  .stat-value {
+    font-size: 1.65rem;
+  }
+
+  .services-grid,
+  .process-steps,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 24px;
+  }
+
+  .about-portrait {
+    max-width: 270px;
+  }
+
+  .about-portrait-image {
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+
+  .process-card,
+  .testimonial-card {
+    padding-inline: 22px;
+  }
+
+  .consultation-cta {
+    padding-block: 52px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-company {
+    grid-column: auto;
+  }
+}
+
+/* VERY SMALL DEVICES */
+
+@media (max-width: 380px) {
+  .brand-logo {
+    width: 36px;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.43rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.85rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* PRINT STYLES */
+
+@media print {
+  .site-header,
+  .consultation-cta,
+  .site-footer,
+  .hero-actions {
+    display: none !important;
+  }
+
+  body,
+  .home-section,
+  .hero {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .hero-content h1,
+  .hero-content h1 span {
+    color: #000000 !important;
+  }
+
+  .service-card,
+  .process-card,
+  .testimonial-card {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}
+
+
+/* ==========================================
+   DESKTOP WIDTH EXPANSION
+   Berry Cay Financial
+========================================== */
+
+/* Full-width desktop layout */
+
+@media (min-width: 1025px) {
+  #root,
+  .home-page,
+  .site-header,
+  .hero,
+  .stats-strip,
+  .home-section,
+  .consultation-cta,
+  .site-footer {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .container {
+    width: min(94%, 1440px);
+    margin-inline: auto;
+  }
+}

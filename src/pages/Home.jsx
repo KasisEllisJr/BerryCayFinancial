@@ -10,7 +10,7 @@ import "../styles/home.css";
 
 export default function Home() {
   return (
-    <main className="home-page">
+    <main id="main-content" className="home-page">
 
       <Hero />
 

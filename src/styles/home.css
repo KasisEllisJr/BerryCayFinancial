@@ -101,7 +101,6 @@
   display: grid;
   place-items: center;
   color: var(--burgundy);
-  height: 300px;
 }
 
 /* Buttons */
@@ -138,8 +137,7 @@
 
 /* Grid layouts */
 
-.stats-layout,
-.services-grid {
+.stats-layout {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
@@ -158,8 +156,7 @@
   color: var(--burgundy);
 }
 
-.process-grid,
-.testimonials-grid {
+.process-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
@@ -209,10 +206,8 @@
   border-style: dashed;
 }
 
-.testimonial-card span {
-  color: var(--gold);
-  font-size: 2rem;
-}
+/* Individual testimonial text styles are defined in the Stage 6 section.
+   Avoid styling all spans inside testimonial cards. */
 
 /* Final call to action */
 
@@ -256,9 +251,7 @@
   }
 
   .stats-layout,
-  .services-grid,
-  .process-grid,
-  .testimonials-grid {
+  .process-grid {
     grid-template-columns: 1fr;
   }
 
@@ -967,4 +960,90 @@
   .testimonial-card:hover {
     transform: none;
   }
+}
+
+.testimonial-quotation-mark {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 3rem;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* HERO PORTRAIT — image and fallback share the same frame.
+   Note: the src/import path is controlled by Hero.jsx, not CSS. */
+.hero-portrait {
+  width: 100%;
+  max-width: 240px;
+  min-width: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-portrait-image,
+.hero-portrait-placeholder {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  min-height: 0;
+  border: 3px solid var(--gold);
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.hero-portrait-image {
+  object-fit: cover;
+  object-position: center top;
+  background-color: #e7e7e7;
+}
+
+.hero-portrait-placeholder {
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: #e7e7e7;
+  color: var(--burgundy);
+}
+
+.hero-portrait-caption {
+  margin-top: 10px;
+  color: #f4e7e9;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .hero-portrait {
+    max-width: 230px;
+  }
+}
+
+.hero-actions .btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.hero-actions .btn-outline {
+  min-width: 170px;
+}
+
+.about-role {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--burgundy);
+  margin: 0 0 18px;
+}
+
+.about-content .about-description {
+  margin-bottom: 20px;
+}
+
+.about-content .about-highlights {
+  margin-top: 24px;
+}
+
+.about-content .about-button {
+  white-space: nowrap;
 }

@@ -9,63 +9,64 @@ import {
 export const statistics = [
   {
     id: "stat-1",
-    value: "10+",
-    label: "Lorem ipsum dolor",
+    value: "25+ years",
+    label: "in financial services",
   },
   {
     id: "stat-2",
-    value: "500+",
-    label: "Lorem ipsum sit amet",
+    value: "Nassau",
+    label: "The Bahamas",
   },
   {
     id: "stat-3",
-    value: "98%",
-    label: "Consectetur adipiscing",
+    value: "Small-business focus",
+    label: "businesses & individuals",
   },
   {
     id: "stat-4",
-    value: "24/7",
-    label: "Lorem ipsum elit",
+    value: "Led by Samantha",
+    label: "Managing Director",
   },
 ];
 
 export const services = [
   {
     id: "service-1",
-    title: "Lorem Ipsum",
+    title: "Accounting",
     description:
-      "Lorem ipsum dolor sit amet, consectetur " +
-      "adipiscing elit. Sed do eiusmod tempor " +
-      "incididunt ut labore et dolore.",
+      "Financial statements and reporting prepared " +
+      "to the standard lenders, auditors and " +
+      "partners expect to see.",
     icon: Wallet,
     link: "#contact",
   },
   {
     id: "service-2",
-    title: "Dolor Sit Amet",
+    title: "Bookkeeping",
     description:
-      "Lorem ipsum dolor sit amet, consectetur " +
-      "adipiscing elit. Ut enim ad minim veniam.",
+      "Day-to-day records kept current and " +
+      "reconciled, so your books are never " +
+      "a year-end scramble.",
     icon: ChartNoAxesCombined,
     link: "#contact",
   },
   {
     id: "service-3",
-    title: "Consectetur Elit",
+    title: "Tax Reporting",
     description:
-      "Lorem ipsum dolor sit amet, sed do " +
-      "eiusmod tempor incididunt ut labore " +
-      "et dolore magna aliqua.",
+      "Filings prepared accurately and submitted " +
+      "on time — VAT, business licence and " +
+      "payroll obligations covered.",
     icon: ShieldCheck,
     link: "#contact",
   },
   {
     id: "service-4",
-    title: "Adipiscing Elit",
+    title: "Advisory",
     description:
-      "Lorem ipsum dolor sit amet, consectetur " +
-      "adipiscing elit. Quis nostrud " +
-      "exercitation ullamco laboris.",
+      "Plain-language guidance on what your " +
+      "numbers are saying, so decisions " +
+      "are grounded — not guessed.",
     icon: Landmark,
     link: "#contact",
   },

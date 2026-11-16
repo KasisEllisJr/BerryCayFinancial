@@ -710,3 +710,261 @@
     transform: none;
   }
 }
+
+
+/* ==========================================
+   COMMIT 6 — PROCESS & TESTIMONIALS
+========================================== */
+
+/* PROCESS INTRODUCTION */
+
+.process-intro,
+.testimonials-intro {
+  color: #526070;
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 0 36px;
+}
+
+/* PROCESS GRID */
+
+.process-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+
+  counter-reset: process;
+}
+
+.process-step {
+  min-width: 0;
+}
+
+/* PROCESS CARD */
+
+.process-card {
+  height: 100%;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 42px 28px 32px;
+  text-align: center;
+
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+
+  box-shadow: 0 4px 15px rgba(31, 24, 26, 0.035);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(31, 24, 26, 0.08);
+}
+
+/* STEP NUMBER */
+
+.process-step-number {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--burgundy);
+  color: #ffffff;
+
+  border: 3px solid var(--light-gray);
+  border-radius: 50%;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* PROCESS ICON */
+
+.process-icon {
+  width: 66px;
+  height: 66px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f7ecef;
+  color: #a58235;
+
+  border-radius: 50%;
+  margin-bottom: 22px;
+}
+
+/* PROCESS TEXT */
+
+.process-card-title {
+  color: var(--burgundy);
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 1.25rem;
+  line-height: 1.3;
+
+  margin: 0 0 16px;
+}
+
+.process-card-description {
+  color: #526070;
+
+  font-size: 0.93rem;
+  line-height: 1.75;
+
+  margin: 0;
+}
+
+/* TESTIMONIAL GRID */
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* TESTIMONIAL CARD */
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  height: 100%;
+
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+
+  padding: 30px;
+  margin: 0;
+
+  box-shadow: 0 4px 16px rgba(31, 24, 26, 0.04);
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(31, 24, 26, 0.08);
+}
+
+/* DECORATIVE STARS */
+
+.testimonial-stars {
+  display: flex;
+  gap: 4px;
+
+  color: #b59140;
+  margin-bottom: 20px;
+}
+
+/* TESTIMONIAL QUOTE */
+
+.testimonial-quote {
+  margin: 0 0 26px;
+  flex-grow: 1;
+
+  color: #526070;
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.testimonial-quote p {
+  margin: 0;
+}
+
+/* TESTIMONIAL AUTHOR */
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  border-top: 1px solid var(--border-color);
+  padding-top: 18px;
+}
+
+.testimonial-name {
+  color: var(--burgundy);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.testimonial-subtitle {
+  color: #69707a;
+  font-size: 0.8rem;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .process-steps,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 36px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .process-steps,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .process-card {
+    padding: 42px 24px 28px;
+  }
+
+  .testimonial-card {
+    padding: 24px;
+  }
+
+  .process-intro,
+  .testimonials-intro {
+    font-size: 0.95rem;
+    margin-bottom: 38px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .process-card,
+  .testimonial-card {
+    transition: none;
+  }
+
+  .process-card:hover,
+  .testimonial-card:hover {
+    transform: none;
+  }
+}

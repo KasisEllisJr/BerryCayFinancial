@@ -1,3 +1,5 @@
+import ProcessSection from "../components/home/ProcessSection";
+import TestimonialsSection from "../components/home/TestimonialsSection";
 import AboutSection from "../components/home/AboutSection";
 import StatsStrip from "../components/home/StatsStrip";
 import Services from "../components/home/Services";
@@ -17,47 +19,9 @@ export default function Home() {
 
       <AboutSection />
 
-      {/* Process */}
-      <HomeSection
-        id="process"
-        title="Lorem Ipsum"
-        alternate
-      >
-        <p className="section-intro">
-          Lorem ipsum dolor sit amet.
-        </p>
+      <ProcessSection />
 
-        <div className="process-grid">
-          {[1, 2, 3].map((step) => (
-            <article className="process-card" key={step}>
-              <span className="step-number">{step}</span>
-              <h3>Lorem Ipsum</h3>
-              <p>
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-              </p>
-            </article>
-          ))}
-        </div>
-      </HomeSection>
-
-      {/* Testimonials */}
-      <HomeSection
-        id="testimonials"
-        title="Lorem Ipsum"
-      >
-        <div className="testimonials-grid">
-          {[1, 2, 3].map((item) => (
-            <div className="testimonial-card" key={item}>
-              <span>“</span>
-              <p>
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-              </p>
-            </div>
-          ))}
-        </div>
-      </HomeSection>
+      <TestimonialsSection />
 
       {/* Final CTA */}
       <section id="contact" className="final-cta">

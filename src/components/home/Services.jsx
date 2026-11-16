@@ -1,4 +1,3 @@
-
 import HomeSection from "./HomeSection";
 import ServiceCard from "./ServiceCard";
 import { services } from "../../data/homeData";
@@ -7,13 +6,12 @@ export default function Services() {
   return (
     <HomeSection
       id="services"
-      title="Lorem Ipsum Dolor Sit Amet"
+      title="Services"
       alternate
     >
       <p className="services-intro">
-        Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua.
+        Four services, one standard: the rigour of a large
+        institution, scaled to the reality of a small business.
       </p>
 
       <div className="services-grid">

@@ -28,7 +28,7 @@ export default function ServiceCard({
         href={link}
         aria-label={`Learn more about ${title}`}
       >
-        Lorem Ipsum
+        Learn more
         <span aria-hidden="true"> →</span>
       </a>
     </article>

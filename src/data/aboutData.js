@@ -1,47 +1,64 @@
+import aboutPortrait from "../assets/about-portrait.jpg";
 
 export const aboutData = {
-  eyebrow: "Lorem Ipsum Dolor",
+  eyebrow: "Leadership and service you can trust.",
 
-  heading: "Lorem Ipsum Dolor Sit Amet",
+  heading: "Meet Samantha",
 
-  name: "Lorem Ipsum",
+  name: "Samantha Watson-Crooks",
+
+  title: "Managing Director",
+
+  credentials: "MBA, MFin, PICA",
 
   introduction:
-    "Lorem ipsum dolor sit amet, consectetur " +
-    "adipiscing elit. Sed do eiusmod tempor " +
-    "incididunt ut labore et dolore magna aliqua.",
+    "Samantha Watson-Crooks, MBA, MFin, PICA, " +
+    "is the Managing Director of Berry Cay Financial, " +
+    "a Bahamian entity providing bookkeeping, tax " +
+    "reporting, and advisory services to small " +
+    "businesses and individuals.",
 
   description:
-    "Ut enim ad minim veniam, quis nostrud " +
-    "exercitation ullamco laboris nisi ut aliquip " +
-    "ex ea commodo consequat. Duis aute irure " +
-    "dolor in reprehenderit in voluptate velit " +
-    "esse cillum dolore eu fugiat nulla pariatur.",
+    "She brings more than 25 years of financial " +
+    "services experience, including almost a decade " +
+    "as Vice President & Chief Financial Officer " +
+    "of a Nassau fund administration firm and eight " +
+    "years with a global financial group's investor " +
+    "services division, where she held the leadership " +
+    "position of Executive Director, Head of Investor " +
+    "Operations for North America & Europe.",
+
+  closing:
+    "Samantha's academic accomplishments complement " +
+    "her extensive leadership experience, providing " +
+    "Berry Cay Financial's clients with the expertise " +
+    "and guidance their small businesses need.",
 
   highlights: [
     {
       id: 1,
-      text: "Lorem ipsum dolor sit amet",
+      text: "More than 25 years of financial services experience",
     },
     {
       id: 2,
-      text: "Consectetur adipiscing elit",
+      text: "Former Vice President & Chief Financial Officer",
     },
     {
       id: 3,
-      text: "Sed do eiusmod tempor",
+      text: "Former Executive Director, Investor Operations",
     },
     {
       id: 4,
-      text: "Ut labore et dolore magna",
+      text: "MBA, MFin, PICA",
     },
   ],
 
-  image: "/images/about-portrait.jpg",
+  image: aboutPortrait,
 
-  imageAlt: "Berry Cay Financial team member portrait",
+  imageAlt:
+    "Samantha Watson-Crooks, Managing Director of Berry Cay Financial",
 
-  buttonText: "Lorem Ipsum",
+  buttonText: "Meet Samantha",
 
   buttonLink: "#contact",
 };

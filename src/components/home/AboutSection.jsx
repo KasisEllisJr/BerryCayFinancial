@@ -54,6 +54,10 @@ export default function AboutSection() {
             {aboutData.name}
           </h3>
 
+          <p className="about-role">
+            {aboutData.title} | {aboutData.credentials}
+          </p>
+
           <p className="about-introduction">
             {aboutData.introduction}
           </p>
@@ -62,7 +66,10 @@ export default function AboutSection() {
             {aboutData.description}
           </p>
 
-          {/* Qualifications / Highlights */}
+          <p className="about-description">
+            {aboutData.closing}
+          </p>
+
           <ul className="about-highlights">
             {aboutData.highlights.map((item) => (
               <li
@@ -80,15 +87,15 @@ export default function AboutSection() {
             ))}
           </ul>
 
-          {/* CTA */}
           <a
             href={aboutData.buttonLink}
             className="btn btn-burgundy about-button"
           >
-            {aboutData.buttonText}
+            {aboutData.buttonText} →
           </a>
 
         </div>
+
       </div>
     </HomeSection>
   );

@@ -1,0 +1,264 @@
+
+/* ==========================================
+   STAGE 7 — CONSULTATION CTA & FOOTER
+========================================== */
+
+/* CONSULTATION CTA */
+
+.consultation-cta {
+  background: var(--burgundy);
+  color: var(--white);
+  padding: 64px 20px;
+  text-align: center;
+}
+
+.consultation-content {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.consultation-content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+
+  margin: 0 0 18px;
+}
+
+.consultation-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #f4e9eb;
+
+  max-width: 650px;
+  margin: 0 0 28px;
+}
+
+/* CONSULTATION BUTTON */
+
+.consultation-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+  padding: 14px 28px;
+
+  background: var(--gold);
+  color: #29220f;
+
+  border-radius: 7px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.consultation-button:hover {
+  background: #b99637;
+  transform: translateY(-2px);
+}
+
+.consultation-button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* MAIN FOOTER */
+
+.site-footer {
+  background: #421620;
+  color: #f5edef;
+  padding: 56px 0 26px;
+}
+
+/* FOOTER GRID */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr 1fr;
+  gap: clamp(24px, 5vw, 70px);
+
+  padding-bottom: 48px;
+}
+
+.footer-column {
+  min-width: 0;
+}
+
+.footer-heading {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  color: #ffffff;
+  margin: 0 0 18px;
+}
+
+/* COMPANY DESCRIPTION */
+
+.footer-description {
+  max-width: 320px;
+
+  color: #e9dfe1;
+  font-size: 0.9rem;
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+/* FOOTER NAVIGATION */
+
+.footer-links,
+.footer-contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  display: inline-block;
+  color: #f5edef;
+
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+/* CONTACT INFORMATION */
+
+.footer-contact-list li {
+  font-size: 0.9rem;
+  color: #e9dfe1;
+  line-height: 1.65;
+}
+
+/* BOTTOM FOOTER */
+
+.footer-bottom {
+  border-top: 1px solid #815462;
+  padding-top: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-copyright {
+  color: #f5edef;
+  font-size: 0.85rem;
+}
+
+.footer-tagline {
+  color: var(--gold);
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.footer-disclaimer {
+  color: #cdb8bd;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+.footer-links a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+  }
+
+  .footer-company {
+    grid-column: 1 / -1;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .consultation-cta {
+    padding: 52px 18px;
+  }
+
+  .consultation-content h2 {
+    font-size: 2rem;
+  }
+
+  .consultation-content p {
+    font-size: 0.95rem;
+  }
+
+  .consultation-button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .site-footer {
+    padding: 44px 0 22px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-bottom: 38px;
+  }
+
+  .footer-company {
+    grid-column: auto;
+  }
+
+  .footer-heading {
+    margin-bottom: 14px;
+  }
+
+  .footer-bottom {
+    padding-top: 22px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .consultation-button,
+  .footer-links a {
+    transition: none;
+  }
+
+  .consultation-button:hover {
+    transform: none;
+  }
+}

@@ -1,3 +1,4 @@
+import ConsultationCTA from "../components/home/ConsultationCTA";
 import ProcessSection from "../components/home/ProcessSection";
 import TestimonialsSection from "../components/home/TestimonialsSection";
 import AboutSection from "../components/home/AboutSection";
@@ -23,19 +24,7 @@ export default function Home() {
 
       <TestimonialsSection />
 
-      {/* Final CTA */}
-      <section id="contact" className="final-cta">
-        <div className="container">
-          <h2>Lorem ipsum dolor sit amet.</h2>
-          <p>
-            Consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt.
-          </p>
-          <a href="mailto:hello@example.com" className="btn btn-gold">
-            Lorem Ipsum
-          </a>
-        </div>
-      </section>
+      <ConsultationCTA />
 
     </main>
   );

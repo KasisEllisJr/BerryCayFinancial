@@ -1,4 +1,3 @@
-
 export default function ConsultationCTA() {
   return (
     <section
@@ -7,24 +6,21 @@ export default function ConsultationCTA() {
       aria-labelledby="consultation-heading"
     >
       <div className="container consultation-content">
-
         <h2 id="consultation-heading">
-          Lorem ipsum dolor sit amet.
+          Let's get your numbers in order.
         </h2>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
+          Experience your business can count on —
+          starting with one conversation.
         </p>
 
         <a
           href="#footer-contact"
           className="consultation-button"
         >
-          Lorem Ipsum
+          Book a Consultation
         </a>
-
       </div>
     </section>
   );

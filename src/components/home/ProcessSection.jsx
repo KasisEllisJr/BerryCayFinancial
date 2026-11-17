@@ -1,19 +1,16 @@
 import HomeSection from "./HomeSection";
 import ProcessCard from "./ProcessCard";
-
 import { processSteps } from "../../data/engagementData";
 
 export default function ProcessSection() {
   return (
     <HomeSection
       id="process"
-      title="Lorem Ipsum Dolor Sit"
+      title="How it works"
       alternate
     >
       <p className="process-intro">
-        Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua.
+        Getting started takes three steps.
       </p>
 
       <ol className="process-steps">
@@ -23,7 +20,6 @@ export default function ProcessSection() {
             number={step.number}
             title={step.title}
             description={step.description}
-            icon={step.icon}
           />
         ))}
       </ol>

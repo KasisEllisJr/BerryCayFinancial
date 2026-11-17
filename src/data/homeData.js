@@ -20,7 +20,7 @@ export const statistics = [
   {
     id: "stat-3",
     value: "Small-business focus",
-    label: "businesses & individuals",
+    label: "Businesses & Individuals",
   },
   {
     id: "stat-4",

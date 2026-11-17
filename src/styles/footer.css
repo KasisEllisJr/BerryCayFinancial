@@ -77,7 +77,7 @@
 .site-footer {
   background: #421620;
   color: #f5edef;
-  padding: 56px 0 26px;
+  padding: 40px 0 26px;
 }
 
 /* FOOTER GRID */
@@ -87,7 +87,7 @@
   grid-template-columns: 1.3fr 0.9fr 1fr;
   gap: clamp(24px, 5vw, 70px);
 
-  padding-bottom: 48px;
+  padding-bottom: 30px;
 }
 
 .footer-column {
@@ -100,7 +100,7 @@
   font-weight: 700;
 
   color: #ffffff;
-  margin: 0 0 18px;
+  margin: 0 0 10px;
 }
 
 /* COMPANY DESCRIPTION */
@@ -148,7 +148,7 @@
 .footer-contact-list li {
   font-size: 0.9rem;
   color: #e9dfe1;
-  line-height: 1.65;
+  line-height: 1.2;
 }
 
 /* BOTTOM FOOTER */
@@ -228,13 +228,13 @@
   }
 
   .site-footer {
-    padding: 44px 0 22px;
+    padding: 36px 0 22px;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 36px;
-    padding-bottom: 38px;
+    padding-bottom: 20px;
   }
 
   .footer-company {
@@ -242,7 +242,7 @@
   }
 
   .footer-heading {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
 
   .footer-bottom {
@@ -262,3 +262,84 @@
     transform: none;
   }
 }
+
+.footer-description {
+  white-space: pre-line;
+}
+
+
+/* ==========================================
+   FOOTER LINKS — HORIZONTAL LAYOUT
+========================================== */
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.footer-links li {
+  width: auto;
+  text-align: center;
+}
+
+.footer-links a {
+  white-space: nowrap;
+}
+
+/* Mobile: allow links to wrap if needed */
+@media (max-width: 640px) {
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px 18px;
+  }
+}
+
+/* ==========================================
+   FOOTER — CENTER COMPANY INFORMATION
+========================================== */
+
+.footer-company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-company .footer-heading {
+  width: 100%;
+  text-align: center;
+}
+
+.footer-company .footer-description {
+  width: 100%;
+  max-width: none;
+  text-align: center;
+  margin: 0 auto;
+}
+/* Clickable contact values only */
+
+.footer-contact-list .contact-label {
+  color: #f5edef;
+  text-decoration: none;
+}
+
+.footer-contact-list a {
+  color: #f5edef;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-contact-list a:hover {
+  color: var(--gold);
+}
+
+.footer-contact-list a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+

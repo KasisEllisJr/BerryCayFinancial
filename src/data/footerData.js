@@ -3,8 +3,9 @@ export const footerData = {
   companyName: "Berry Cay Financial",
 
   description:
-    "Lorem ipsum dolor sit amet, consectetur " +
-    "adipiscing elit. Sed do eiusmod tempor.",
+    "Nassau, The Bahamas\n" +
+    "Accounting · Bookkeeping\n" +
+    "Tax Reporting · Advisory",
 
   navigation: [
     {
@@ -26,15 +27,26 @@ export const footerData = {
   ],
 
   contact: [
-    "Lorem ipsum dolor sit amet",
-    "Consectetur adipiscing elit",
-    "Sed do eiusmod tempor",
-  ],
+    {
+        label: "WhatsApp:",
+        value: "(242) 424-3501",
+        href: "https://wa.me/12424243501",
+    },
+    {
+        label: "Email:",
+        value: "your-email@example.com",
+        href: "mailto:your-email@example.com",
+    },
+    {
+        label: "",
+        value: "Nassau, The Bahamas",
+        href: null,
+    },
+    ],
 
   tagline:
-    "Lorem ipsum dolor sit amet.",
+    "Personal service. Professional standards.",
 
   disclaimer:
-    "Lorem ipsum dolor sit amet, consectetur " +
-    "adipiscing elit.",
+    "General information only — not legal or financial advice.",
 };

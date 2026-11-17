@@ -53,16 +53,35 @@ export default function Footer() {
             id="footer-contact"
           >
             <h3 className="footer-heading">
-              Lorem Ipsum
+              Get in touch
             </h3>
 
+            
             <ul className="footer-contact-list">
-              {footerData.contact.map((item, index) => (
-                <li key={index}>
-                  {item}
+            {footerData.contact.map((item) => (
+                <li key={item.value}>
+                {item.label && (
+                    <span className="contact-label">
+                    {item.label}{" "}
+                    </span>
+                )}
+
+                {item.href ? (
+                    <a
+                    href={item.href}
+                    target={item.href.startsWith("https://") ? "_blank" : undefined}
+                    rel={item.href.startsWith("https://") ? "noopener noreferrer" : undefined}
+                    >
+                    {item.value}
+                    </a>
+                ) : (
+                    <span>{item.value}</span>
+                )}
                 </li>
-              ))}
+            ))}
             </ul>
+
+
 
           </div>
 

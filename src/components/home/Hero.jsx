@@ -57,7 +57,7 @@ export default function Hero() {
           />
 
           <figcaption className="hero-portrait-caption">
-            Lorem ipsum dolor sit amet
+            I am Samantha/Testing
           </figcaption>
         </figure>
 
